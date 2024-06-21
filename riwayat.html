@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Landing Page</title>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: white">
+    <div class="container">
+      <a class="navbar-brand" href="#"> 
+        <img src="img/GB.png" alt="" width="120" height="100" class="d-inline-block align-text-top" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SHOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="cart.html">
+              <i style="color: rgb(255, 72, 157);" class="bi bi-cart-fill"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <button style="margin-left: 20px; margin-top: 20px; margin-bottom: 20px;" type="button" id="btn" class="btn btn-info">Kembali</button>
+
+  <div class="card" id="data">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong> 
+          <span class="glyphicon glyphicon-list-alt"></span> 
+          Riwayat Transaksi
+        </strong>
+      </li>
+      <li class="list-group-item">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Nama Barang</th>
+                <th>Jumlah Pesan</th>
+                <th>Harga</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Crystal Brush Makeup</td>
+                <td>2</td>
+                <td>300.000</td>
+                <td>600.000</td>
+                <td><button type="button" id="biru" class="btn btn-info">Detil</button></td>
+              </tr>
+              <tr>
+                <td>Crystal Brush Makeup</td>
+                <td>3</td>
+                <td>200.000</td>
+                <td>600.000</td>
+                <td><button type="button" id="biru" class="btn btn-info">Detil</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li> 
+    </ul>
+  </div>
+
+  <br> <br> <br> <br>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container1">
+      <div class="row1">
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services </a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Payment Options</a></li>
+          </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Online Shop</h4>
+        <ul>
+          <li><a href="#">Makeup</a></li>
+          <li><a href="#">Skincare</a></li>
+          <li><a href="#">Bodycare</a></li>
+          <li><a href="#">Mask</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+  </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1F0FKnXcf/AV2E6Aew1PxZtJ6r/FhtR9WPyCWTKL4gTJB3c/z1eDkt/gD+VvP8g" crossorigin="anonymous"></script>
+</body>
+</html>

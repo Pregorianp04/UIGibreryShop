@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Admin Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+    <div class="sidebar">
+      <div class="sidebar-brand">
+        <a href="#"> <img class="gambar" src="GB.png" alt="" width="150" height="130" /></a>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="index.html" class="active"><span class="las la-igloo"></span> <span>Dashboard</span></a>
+          </li>
+          <li>
+            <a href="produk.html"><span class="las la-clipboard-list"></span> <span>Product</span></a>
+          </li>
+          <li>
+            <a href="transaksi.html"><span class="las la-shopping-bag"></span> <span>Orders</span></a>
+          </li>
+          <li>
+            <a href="pengguna.html"><span class="las la-user-circle"></span> <span>Accounts</span></a>
+          </li>
+          <li>
+            <a href="Artikel.html"><span class="las la-bell"></span> <span>Article</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <h2>
+          <label for="nav-toggle">
+            <span class="las la-bars"></span>
+          </label>
+          Dashboard
+        </h2>
+
+        <div class="search-wrapper">
+          <span class="las la-search"></span>
+          <input type="search" placeholder="Search" />
+          <button class="button" type="submit">Search</button>
+        </div>
+
+        <div class="user-wrapper">
+          <img src="1.jpeg" width="40px" height="40px" alt="" />
+          <div>
+            <h4>Pregorian</h4>
+            <small>Admin</small>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <button style="margin-left: 20px; margin-top: 20px; margin-bottom: 20px;" type="button" id="btn" class="btn btn-info">Tambah</button>
+
+        <div class="">
+          <div class="">
+            <div class="card" id="data">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <strong> 
+                    <span class="glyphicon glyphicon-list-alt"></span> 
+                    Transaksi
+                  </strong>
+                </li>
+                <li class="list-group-item">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Nama Barang</th>
+                          <th>Jumlah Pesan</th>
+                          <th>Harga</th>
+                          <th>Total</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Crystal Brush Makeup</td>
+                          <td>2</td>
+                          <td>300.000</td>
+                          <td>600.000</td>
+                          <td><button type="button" id="biru" class="btn btn-success">Edit</button> <button type="button" id="biru" class="btn btn-danger">Hapus</button></td>
+                        </tr>
+                        <tr>
+                          <td>Crystal Brush Makeup</td>
+                          <td>3</td>
+                          <td>200.000</td>
+                          <td>600.000</td>
+                          <td><button type="button" id="biru" class="btn btn-success">Edit</button> <button type="button" id="biru" class="btn btn-danger">Hapus</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </li> 
+              </ul>
+            </div>
+
+            <div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Gibrery Shop</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    </head>
+
+    <body>
+        <style>
+            html {
+                color: #252525;
+            }
+            main {
+                margin-top: 50px;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0);
+                max-width: 1280px;
+                padding: 0 18px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content:center;	
+            }
+            section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content:center;
+                overflow: hidden;
+            }
+            article {
+                font-family: 'Open Sans', sans-serif;
+            }
+            h1 {
+                font-family: 'Alfa Slab One', cursive;
+                text-align: center;
+                letter-spacing: 1.5px;
+            }
+            .h1-divider {
+                background-color: #252525;
+                margin-bottom: 37px;
+            }
+            article h3 {
+                font-weight: 800;
+                margin: 0;
+                line-height: 27px;
+            }
+            section p {
+                font-family: 'Open Sans', sans-serif;
+                color: #252525;
+                line-height: 25px;
+                margin-bottom: 40px;
+                text-align: justify;
+            }
+            section .intro {
+                font-weight: 300;
+            }
+            article p {
+                margin-top: 0;
+                margin-bottom: 50px;
+            }
+            article h3,
+            section p {
+                font-size: 16px;
+            }
+            .placeHolder_img {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+            }
+            
+            
+            /*--------------------------
+            
+                 Media Queries 
+            
+            --------------------------*/
+            /*    Mobile    */
+            
+            @media only screen and (min-width: 320px) {
+                /* 320px */
+                h1 {
+                    font-size: 42px;
+                    line-height: 44px;
+                }
+                .h1-divider {
+                    width: 222px;
+                    height: 19px;
+                }
+                .placeHolder_img {
+                    height: 320px;
+                    margin: 0 0 50px 0;
+                }
+            
+            }
+            
+            @media only screen and (min-width: 375px) {
+                /* 375 */
+                
+            }
+            
+            @media only screen and (min-width: 414px) {
+                /* 414 */
+                
+            }
+            
+            @media only screen and (min-width: 568px) {
+                /* 568 */
+                
+            }
+            
+            @media only screen and (min-width: 667px) {
+                /* 667px */
+                article p {
+                    column-count: 2;
+                    column-gap: 42px;
+                }
+                
+            }
+            
+            @media only screen and (min-width: 736px) {
+                /* 736px */
+                
+            }
+            
+            /*Tablet*/
+            
+            @media only screen and (min-width: 768px) {
+                /* 768 */
+                main {
+                    padding: 0 40px;
+                }
+                h1 {
+                    font-size: 53.1px;
+                    line-height: 0.98;
+                    letter-spacing: 1.1px;
+                    margin-bottom: 20px;
+                }
+                .h1-divider {
+                    width: 339px;
+                    height: 24px;
+                    margin-bottom: 53px;
+                }
+                article p {
+                    margin-bottom: 40px;
+                }
+                .placeHolder_img {
+                    height: 344px;
+                    margin: 0 0 40px 0;
+                }
+            
+            }
+            
+            /*    Desktop    */
+            
+            @media only screen and (min-width: 1024px) {
+                /* 1024 */
+                section {
+                    width: 820px;
+                }
+                h1 {
+                    font-size: 66.4px;
+                    line-height: 0.95;
+                    letter-spacing: 1.4px;
+                    margin-bottom: 30px;
+                }
+                .h1-divider {
+                    width: 486px;
+                    margin-bottom: 38px;
+                }
+                .placeHolder_img {
+                    height: 442px;
+                }
+                
+            }
+            
+            @media only screen and (min-width: 1140px) {
+                /* 1140 */
+                section {
+                    width: 1035px;
+                }
+                h1 {
+                    font-size: 72px;
+                    line-height: 0.98;
+                }
+                .h1-divider {
+                    width: 480px;
+                    margin-bottom: 45px;
+                }
+                .placeHolder_img {
+                    height: 432px;
+                }
+                
+            }
+            
+            @media only screen and (min-width: 1440px) {
+                /* 1440 */
+            }
+            
+            @media only screen and (min-width: 1662px) {
+                /* 1662px */
+            }
+        </style>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: white">
+    <div class="container">
+      <a class="navbar-brand" href="#"> <img src="img/GB.png" alt="" width="120" height="100" class="d-inline-block align-text-top" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SHOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link active" href="cart.html"><i  style="color: rgb(255, 72, 157);" class="bi bi-cart-fill"></i></a>
+        </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+              
+           
+        <!-- Artikel -->
+        <main>
+            <section>
+                <h1>The Essential Skincare Routine</h1>
+                <div class="h1-divider"></div>
+                <p class="intro">A recent survey shows that more and more people are becoming conscious of their skin health and are seeking effective skincare products. With that in mind, we’re taking a look at some of the best products and practices in the skincare world that have become trends and continue to influence the beauty industry. The following products are not only popular among users but also continue to inspire dermatologists and skincare formulators to this day.</p>
+        
+                <article>
+                    <h3>Skincare Tips</h3>
+                    <p> Taking care of your skin is essential for maintaining a healthy and youthful appearance. But with so many products and routines available, it can be overwhelming to know where to start. This guide will break down the basics of skincare and help you establish a simple yet effective routine</p>
+                    <div class="placeHolder_img"><img src="img/mk1.jpg" alt=""></div>
+        
+                    <h3>Step-Step Skincare</h3>
+                        <p class="mb-4">A basic skincare routine typically involves the following steps:
+                            <br>
+                            1. Cleansing: Removes dirt, oil, and impurities from the skin. It's essential to use a gentle cleanser that matches your skin type. <br>
+                            2. Exfoliating: Removes dead skin cells and helps to keep the pores clear. Exfoliation should be done 1-2 times a week to avoid irritation. <br>
+                            3. Toning: Balances the skin's pH and prepares it for the next steps. Toners can also help to tighten pores and remove any leftover impurities. <br>
+                            4. Moisturizing: Keeps the skin hydrated and locks in moisture. Moisturizers are crucial for all skin types, even oily skin.</p>
+                </article>
+            </section>
+        </main>
+                        
+                      
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container1">
+          <div class="row1">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Our Services </a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Get Help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Payment Options</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Online Shop</h4>
+            <ul>
+              <li><a href="#">Makeup</a></li>
+              <li><a href="#">Skincare</a></li>
+              <li><a href="#">Bodycare</a></li>
+              <li><a href="#">Mask</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+      </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>

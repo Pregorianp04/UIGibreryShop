@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Gibrery Shop</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    </head>
+
+    <body>
+        <style>
+         
+           /*
+LINKS:
+Typetura docs: https://docs.typetura.com/creating-with-typetura/creating-your-own-typographic-system
+Cubic Bezier: https://cubic-bezier.com/
+Fraunces: https://fraunces.undercase.xyz/
+Google variable fonts: https://css-tricks.com/getting-the-most-out-of-variable-fonts-on-google-fonts/
+Grid system: https://gist.github.com/scottkellum/bb46ea68c23e630842ee80c37513a3e6
+*/
+
+/* Import our variable font Fraunces */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&family=Fraunces:ital,opsz,wght,SOFT,WONK@1,9..144,100..900,0..100,0..1&display=swap");
+
+/* Variables and page setup */
+
+html {
+	font-family: Fraunces, serif;
+	font-size: 115%;
+	line-height: 1.35;
+	font-weight: 340;
+	color: var(--text);
+	background: var(--background);
+	padding-bottom: 20vh;
+
+	/* Typetura */
+	--tt-key: html;
+	--tt-max: 900;
+	--tt-ease: cubic-bezier(0, 0.78, 0.53, 1);
+
+	/* Grid */
+	--max-width: 1200px;
+	--columns: 6;
+	--gutter: 1.5rem;
+
+	/* Color */
+	--primary: #f4663a;
+	--background: #efeded;
+	--background-alt: #ffffff;
+	--text: #31355b;
+}
+@keyframes html {
+	0% {
+		font-size: 0%;
+	}
+
+	100% {
+		font-size: 125%;
+	}
+}
+* {
+	--grid: minmax(var(--gutter), 1fr)
+		repeat(
+			var(--columns),
+			minmax(
+				0,
+				calc(
+					(var(--max-width) - (var(--gutter) * (var(--columns) - 1))) /
+						var(--columns)
+				)
+			)
+		)
+		minmax(var(--gutter), 1fr);
+}
+
+/* Element styles */
+
+body {
+	margin: 0;
+}
+
+img {
+	width: 100%;
+}
+
+/* Typography */
+
+.masthead {
+	color: var(--primary);
+	mix-blend-mode: multiply;
+	text-align: center;
+	font-variation-settings: "WONK" 1, "SOFT" 30;
+	--tt-key: masthead;
+	--tt-max: 1200;
+	--tt-ease: ease-in-out;
+	margin: 0.5em 0 -0.5em;
+}
+@keyframes masthead {
+	0% {
+		font-size: 1rem;
+		margin-bottom: -0.45em;
+		font-weight: 600;
+	}
+	100% {
+		font-size: 6.5rem;
+		margin-bottom: -0.375em;
+		font-weight: 500;
+	}
+}
+
+.primary-headline {
+	--tt-key: primary-headline;
+	--tt-ease: cubic-bezier(1, 0, 1, 1);
+	--tt-max: 585;
+	line-height: 1;
+	font-variation-settings: "SOFT" 0, "WONK" 1;
+	margin: 0.5rem 0;
+}
+@keyframes primary-headline {
+	0% {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+	100% {
+		font-size: 4rem;
+		font-weight: 300;
+	}
+}
+
+.meta {
+	font-style: italic;
+	margin: 0.25rem 0;
+	font-size: 0.75rem;
+}
+
+.entry-summary {
+	margin: 0.25rem 0;
+}
+
+/* Layout */
+
+.main {
+	column-gap: var(--gutter);
+	grid-template-columns: var(--grid);
+	padding: var(--gutter);
+}
+
+.entry {
+	margin-bottom: var(--gutter);
+}
+
+.entry,
+.entry-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.entry-img {
+	aspect-ratio: 5 / 3;
+	object-fit: cover;
+}
+
+.entry-date {
+	order: -1;
+}
+
+/* Module overrides */
+
+.entry-lede time {
+	margin-bottom: 1rem;
+}
+
+.entry-lede time::after {
+	content: "";
+	display: block;
+	width: calc(100% + (var(--gutter) * 2));
+	height: 1px;
+	margin-left: calc(var(--gutter) * -2);
+	background: var(--primary);
+	mix-blend-mode: multiply;
+	margin-top: 0.67rem;
+}
+
+/* Breakpoints */
+
+@media (min-width: 30em) {
+	html {
+		--columns: 12;
+	}
+	.main,
+	.entry-lede {
+		padding: 0;
+		display: grid;
+	}
+
+	.entry,
+	.trending {
+		grid-column-start: 3;
+		grid-column-end: span 10;
+	}
+
+	.entry-lede {
+		column-gap: var(--gutter);
+		grid-template-columns: var(--grid);
+		grid-column-start: 1;
+		grid-column-end: span 14;
+		margin-bottom: 4rem;
+	}
+
+	.entry-lede > .entry-img {
+		aspect-ratio: auto;
+		grid-column-start: 1;
+		grid-column-end: span 10;
+	}
+
+	.entry-lede .entry-content {
+		grid-column-start: 3;
+		grid-column-end: span 11;
+		margin: -2.5rem calc(var(--gutter) * -1) 0;
+		background: var(--background-alt);
+		padding: 0.5rem var(--gutter) 1rem;
+	}
+}
+@media (min-width: 50em) {
+	html {
+		--columns: 24;
+	}
+
+	.main::before,
+	.main::after {
+		content: "";
+		display: block;
+		grid-column-start: 8;
+		grid-column-end: 26;
+		grid-row-start: 2;
+		grid-row-end: 3;
+		background: var(--background-alt);
+		margin: 0 calc(var(--gutter) * -1);
+		z-index: -1;
+	}
+	.main::after {
+		grid-column-start: 2;
+		background-color: var(--primary);
+		height: 1px;
+		mix-blend-mode: multiply;
+	}
+
+	.entry {
+		grid-column-end: span 9;
+		margin-bottom: var(--gutter);
+	}
+	.entry:nth-child(n + 2) {
+		margin-top: -2rem;
+		grid-row-start: 2;
+	}
+	.entry:nth-child(2) {
+		grid-column-start: 8;
+	}
+	.entry:nth-child(3) {
+		grid-column-start: 17;
+	}
+
+	.entry-lede {
+		column-gap: var(--gutter);
+		grid-template-columns: var(--grid);
+		grid-column-start: 1;
+		grid-column-end: span 26;
+		margin-bottom: 4rem;
+	}
+
+	.entry-lede > .entry-img {
+		aspect-ratio: auto;
+		grid-column-start: 1;
+		grid-column-end: span 13;
+	}
+
+	.entry-lede .entry-content {
+		grid-column-start: 14;
+		grid-column-end: span 12;
+		margin: 0.5rem 0;
+		padding: 4rem 0 0;
+		background: none;
+	}
+
+	.trending {
+		grid-row-start: 2;
+		grid-column-start: 2;
+		grid-column-end: span 6;
+		margin-top: var(--gutter);
+		transform: translatex(calc(var(--gutter) * -1));
+	}
+}
+
+        </style>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: white">
+    <div class="container">
+      <a class="navbar-brand" href="#"> <img src="img/GB.png" alt="" width="120" height="100" class="d-inline-block align-text-top" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SHOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link active" href="cart.html"><i  style="color: rgb(255, 72, 157);" class="bi bi-cart-fill"></i></a>
+        </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+              
+           
+        <!-- Artikel -->
+        <header class="header">
+            <h1 class="header-title masthead">Gibrery Article</h1>
+        </header>
+        <main class="main">
+            <article class="entry entry-lede">
+                <img class="entry-img" src="https://editorial.femaledaily.com/_next/image?url=https%3A%2F%2Feditorial.femaledaily.com%2Fwp-content%2Fuploads%2F2024%2F06%2Fwoman-casual-white-sweater-sunglasses-red-wall-1-scaled.jpg&w=1920&q=75" alt="A handsome young horse in front of an expansive sky" />
+                <div class="entry-content">
+                    <h1 class="entry-headline primary-headline">Kulit Lembap Terlindungi dalam Satu Langkah, Coba 4 Moisturizer dengan Kandungan SPF Ini!</h1>
+                    <time class="entry-date meta">June 24, 2024</time>
+                    <span class="entry-byline meta">by Rere</span>
+                    <p class="entry-summary">Skip satu langkah basic skincare tapi kulit tetap terlidungi dengan optimal? Bisa dong! Moisturizer dengan kandungan SPF bisa jadi solusi praktis untuk hari sibukmu.</p>
+                </div>
+            </article>
+            <article class="entry">
+                <img class="entry-img" src="https://editorial.femaledaily.com/_next/image?url=https%3A%2F%2Feditorial.femaledaily.com%2Fwp-content%2Fuploads%2F2024%2F06%2FFoto-2.-ILLIYOON-Ceramide-Ato-Line-lifestyle-shot.jpg&w=1920&q=75" alt="The profile view of three majestic brown horses" />
+                <h1 class="entry-headline primary-headline">Tahan Seharian, Parfum Ini Cocok untuk Pencinta Wangi Floral!</h1>
+                <time class="entry-date meta">July 21, 2024</time>
+                <span class="entry-byline meta">by Pregorian</span>
+                <p class="entry-summary">Lagi cari parfum yang memiliki wangi floral dan tahan lama dipakai seharian? Yuk, intip rekomendasi parfum satu ini!</p>
+            </article>
+            <article class="entry">
+                <img class="entry-img" src="https://img.freepik.com/free-photo/still-life-care-products_23-2149371308.jpg?t=st=1718341467~exp=1718345067~hmac=f8a8a5f3b75ff279a6c8bbbabdbc519044900ca80ac2e85e45511295f882b671&w=996" alt="The profile view of three majestic brown horses" />
+                <h1 class="entry-headline primary-headline">Intip Sederet Produk yang akan Launching di Jakarta X Beauty 2024!</h1>
+                <time class="entry-date meta">May 10, 2024</time>
+                <span class="entry-byline meta">by Purwacahyani</span>
+                <p class="entry-summary">Sudah siap berburu beauty products di Jakarta X Beauty 2024? Yuk, lihat list produk yang akan launching di sini!</p>
+            </article>
+            <section class="trending">
+                <article class="trending-entry">
+                    <time class="trending-entry-date meta">July 21, 2024</time>
+                    <h1 class="trending-entry-headline primary-headline">Tahan Seharian, Parfum Ini Cocok untuk Pencinta Wangi Floral!</h1>
+                </article>
+                <article class="trending-entry">
+                    <time class="trending-entry-date meta">May 10, 2024</time>
+                    <h1 class="trending-entry-headline primary-headline">Intip Sederet Produk yang akan Launching di Jakarta X Beauty 2024!</h1>
+                </article>
+                
+            </section>
+        </main>
+                        
+                      
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container1">
+          <div class="row1">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Our Services </a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Get Help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Payment Options</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Online Shop</h4>
+            <ul>
+              <li><a href="#">Makeup</a></li>
+              <li><a href="#">Skincare</a></li>
+              <li><a href="#">Bodycare</a></li>
+              <li><a href="#">Mask</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+      </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
